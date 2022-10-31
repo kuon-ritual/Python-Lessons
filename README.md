@@ -1,0 +1,1 @@
+This is a repository of all my practice code for learning Python. I may or may not refer back to this on my journey. Nothing special; if you are familiar with Python then reading this will only serve as an exercise in revision, not innovation for you.
