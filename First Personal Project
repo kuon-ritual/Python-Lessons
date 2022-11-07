@@ -1,0 +1,56 @@
+def main():
+
+    a = input("How much are you currently paid per hour? ")
+    b = input("How many hours do you typically work per week? ")
+
+    try:
+        current_rate = int(a)
+        current_hours = int(b)
+
+        current_pay = current_rate * current_hours
+
+    # -----------------------------------------------------------------------------------------------------------------------
+
+        print("This is an approximation of your current weekly pay.")
+        print(current_pay)
+    except:
+        print("Those were not whole numbers. Please run the program again.")
+        main()
+    
+    print("Is this correct?")
+    answer1 = ('')
+    
+    while True:
+        
+        answer1 = input("y/n ")
+        
+        if answer1 != "y" and answer1 != "n":
+            print("Please enter either 'y' or 'n' alone.")
+            continue
+        else:
+            break
+        
+    # -----------------------------------------------------------------------------------------------------------------------
+
+    if answer1 == "y":
+        c = input("How much do you think you should be paid? ")
+        desired_pay = int(c)
+        if (desired_pay > current_pay):
+            print("Please type your name, or enter 'Anon' if you wish to remain anonymous.")
+            name = input("Name here: ")
+            exit()
+        if (desired_pay < current_pay):
+            print("We pay you what you are actually worth because we value you greatly! You make a difference here, and we want you to know that. Keep at it!")
+            exit()
+
+    if answer1 == "n":
+        d = input("What is your actual weekly pay? ")
+        actual_pay = int(d)
+        if (actual_pay < current_pay):
+            print("Contact HR immediately about bringing your pay up to the contractual rate. We are sorry for the inconvenience.")
+            exit()
+        if (actual_pay > current_pay):
+            print("We pay you more because we value you greatly! Keep at it!")
+            exit()
+
+main()

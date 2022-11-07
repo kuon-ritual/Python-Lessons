@@ -1,0 +1,5 @@
+x = "working"
+if x == "working":
+    print("haha depressed")
+else:
+    print("haha lazy")
