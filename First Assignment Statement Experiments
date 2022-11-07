@@ -1,0 +1,16 @@
+effort = int(input ("On a scale of 1-10, how much effort do you put in the gym?: "))
+hours = int(input ("Number of hours you put in weekly: "))
+
+intensity_rating = effort * hours
+
+if intensity_rating > 20:
+	print("Please seek help. You are chronically bitchless.")
+else:
+	print("You need more gainz. That's why you don't have any bitches.")
+
+bitch_getting_potential = int(input ("Rate how much potential you think you have to get bitches on a scale of 1-10: "))
+
+if bitch_getting_potential > 1:
+	print("You are out of your goddamn mind.")
+else:
+	print("It didn't occur to you to go any lower? Moron.")
