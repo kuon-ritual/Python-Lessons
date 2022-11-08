@@ -1,6 +1,6 @@
 while True:
         try:
-            current_rate = int(input("How much are you currently paid per hour? "))
+            current_rate = int(input("How much are you currently paid per hour?\n"))
         except ValueError:
             print("Sorry, that was not a whole number.")
         else:
@@ -8,7 +8,7 @@ while True:
         
 while True:
         try:
-            current_hours = int(input("How many hours do you work per week? "))
+            current_hours = int(input("How many hours do you work per week?\n"))
         except ValueError:
             print("Sorry, that was not a whole number.")
         else:
@@ -26,7 +26,7 @@ answer1 = ('')
     
 while True:
         
-        answer1 = input("y/n ")
+        answer1 = input("y/n\n")
         
         if answer1 != "y" and answer1 != "n":
             print("Please enter either 'y' or 'n' alone.")
@@ -39,24 +39,32 @@ while True:
 if answer1 == "y":
     while True:
         try:
-            desired_pay = int(input("How much do you think you should be paid? "))
+            desired_pay = int(input("How much do you think you should be paid?\n"))
         except ValueError:
             print("Sorry, that was not a whole number. Please try again.")
         else:
             break
     if (desired_pay > current_pay):
         print("Please type your name, or enter 'Anon' if you wish to remain anonymous.")
-        name = input("Name here: ")
-        print("There was an error in entering your name. Please retry.")
+        name = ''
+        while True:
+            name = input("Name here:\n")
+    
+            if not name.isalpha():
+                continue
+            else:
+                break
+        print("Thank you for your contribution! You're all set to let the next person complete this survey.")
         exit()
     if (desired_pay < current_pay):
         print("We pay you what you are actually worth because we value you greatly! You make a difference here, and we want you to know that. Keep at it!")
+        print("Thank you for your contribution! You're all set to let the next person complete this survey.")
         exit()
 
 if answer1 == "n":
     while True:
         try:
-            actual_pay = int(input("What is your actual weekly pay? "))
+            actual_pay = int(input("What is your actual weekly pay?\n"))
         except ValueError:
             print("Sorry, that was not a whole number. Please try again.")
         else:
@@ -66,6 +74,7 @@ if answer1 == "n":
         exit()
     if (actual_pay > current_pay):
         print("We pay you more because we value you greatly! Keep at it!")
+        print("Thank you for your contribution! You're all set to let the next person complete this survey.")
         exit()
 
 # -----------------------------------------------------------------------------------------------------------------------
