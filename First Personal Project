@@ -46,14 +46,9 @@ if answer1 == "y":
             break
     if (desired_pay > current_pay):
         print("Please type your name, or enter 'Anon' if you wish to remain anonymous.")
-        name = ''
-        while True:
+        name = input("Name here:\n")
+        while not name.isalpha():
             name = input("Name here:\n")
-    
-            if not name.isalpha():
-                continue
-            else:
-                break
         print("Thank you for your contribution! You're all set to let the next person complete this survey.")
         exit()
     if (desired_pay < current_pay):
