@@ -1,0 +1,11 @@
+count = None
+
+for i in [29, 32, 45, 67, 4, 72, 88, 37, 82, 1, 95]:
+    if count is None:
+        count = i
+    elif i < count:
+        count = i
+
+print (count)
+
+print ("Done.")
